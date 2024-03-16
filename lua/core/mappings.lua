@@ -294,6 +294,54 @@ M.telescope = {
   },
 }
 
+M.harpoon = {
+  n = {
+    ["<leader>ha"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():append()
+      end,
+      "󱡁 Harpoon Add file",
+    },
+    ["<leader>ta"] = { "<CMD>Telescope harpoon marks<CR>", "󱡀 Toggle quick menu" },
+    ["<leader>hb"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon.ui:toggle_quick_menu(harpoon:list())
+      end,
+      "󱠿 Harpoon Menu",
+    },
+    ["<leader>1"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(1)
+      end,
+      "󱪼 Navigate to file 1",
+    },
+    ["<leader>2"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(2)
+      end,
+      "󱪽 Navigate to file 2",
+    },
+    ["<leader>3"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(3)
+      end,
+      "󱪾 Navigate to file 3",
+    },
+    ["<leader>4"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():select(4)
+      end,
+      "󱪿 Navigate to file 4",
+    },
+  },
+}
+
 M.nvterm = {
   plugin = true,
 
